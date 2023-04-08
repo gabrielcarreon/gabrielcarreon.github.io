@@ -1,0 +1,385 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-family: Poppins, sans-serif;
+  font-weight: 400 !important;
+  font-size: 16px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: white;
+  font-weight: 300;
+  font-family: Montserrat, monospace;
+}
+
+hr.style-one {
+  margin: 0.5rem 0;
+  opacity: 1;
+}
+
+hr.style-two {
+  border: 1px solid rgb(47, 77, 69);
+  opacity: 1;
+}
+
+#home {
+  max-width: 100%;
+  width: 100%;
+}
+
+#offer {
+  background-image: url("../assets/images/offerbg.jpg");
+}
+#offer h2 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+#offer .image {
+  height: 100%;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
+  width: 100%;
+  outline: 1px solid white;
+  outline-offset: -1rem;
+}
+
+#vid-bg {
+  position: absolute;
+  top: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  max-height: 100vh;
+}
+
+#vid-wrapper {
+  z-index: 2;
+  position: absolute;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgb(0, 0, 0));
+  top: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+}
+
+nav {
+  background-color: white;
+}
+nav .navbar-brand .logo {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+}
+nav .nav-link {
+  text-align: center;
+}
+
+.btn-cta {
+  background-color: rgb(130, 9, 51);
+  padding: 0.5rem 2rem;
+  border-radius: 4px;
+  color: white;
+  border: 1px solid rgb(130, 9, 51);
+  transition: 0.2s all linear;
+}
+
+.btn-cta:hover {
+  background-color: white;
+  border: 1px solid rgb(130, 9, 51);
+  color: rgb(130, 9, 51);
+  font-weight: 500;
+}
+
+.content {
+  padding-right: 3rem;
+  position: absolute;
+  z-index: 4;
+  margin-top: 20vh;
+}
+.content h1 {
+  font-size: 2rem;
+  line-height: 2rem;
+}
+.content hr.style-one {
+  height: 3px;
+  background-color: white;
+}
+.content p {
+  margin-bottom: 0;
+  font-weight: 200;
+  color: white;
+}
+.content p:nth-of-type(1) {
+  font-size: 1rem;
+}
+.content p:nth-of-type(2) {
+  font-size: 0.8rem;
+}
+.content .btn-cta {
+  font-size: 0.8rem;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.content .font-cta {
+  font-size: 4rem;
+}
+
+.font-cta {
+  font-family: Tangerine, cursive;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: rgb(115, 171, 132);
+}
+
+.font-secondary {
+  font-family: Montserrat, monospace;
+}
+
+.color-primary {
+  color: rgb(47, 77, 69);
+}
+
+.color-secondary {
+  color: rgb(115, 171, 132);
+}
+
+.hrscroll {
+  z-index: 3;
+  color: white;
+  position: absolute;
+  font-size: 0.8rem;
+  top: 20vh;
+  right: 1rem;
+  writing-mode: vertical-rl;
+}
+
+.hrscroll::after {
+  content: "";
+  display: flex;
+  background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(0, 0, 0));
+  width: 1px;
+  height: 80vh;
+  background-image: 400% 400%;
+}
+
+.navbar {
+  transition: 0.2s background-color linear;
+}
+
+.textblack {
+  color: black !important;
+  font-weight: 400 !important;
+}
+
+.textblack:has(.active) {
+  color: black !important;
+  font-weight: 400 !important;
+  text-decoration: underline;
+}
+
+@media (min-width: 576px) {
+  .content {
+    padding-right: 3rem;
+    margin-top: 20vh;
+    padding-left: 5vw;
+  }
+  .content .font-cta {
+    font-size: 4.5rem;
+  }
+  .content h1 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+}
+@media (min-width: 768px) {
+  #offer .offer-container {
+    position: relative;
+    text-align: center;
+  }
+  #offer .offer-container h2 {
+    left: 0;
+    right: 0;
+    top: 10vh;
+    position: absolute;
+    color: white;
+    text-shadow: 3px 3 px #4E555B;
+  }
+  #offer .offer-container .image {
+    aspect-ratio: unset;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    max-width: 100%;
+    width: 100%;
+    outline: 1px solid white;
+    outline-offset: -1rem;
+  }
+  #offer .line {
+    background-color: rgb(47, 77, 69);
+    height: 6px;
+    border: 1px solid rgb(47, 77, 69);
+    width: 80%;
+  }
+  #offer .line div:nth-of-type(1) {
+    background-color: white;
+    width: 33.33%;
+    height: 100%;
+  }
+}
+@media (min-width: 992px) {
+  body {
+    font-family: Poppins, sans-serif;
+    font-weight: 200 !important;
+  }
+  #offer h2 {
+    font-size: 5rem;
+  }
+  #offer .image {
+    aspect-ratio: unset;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    max-width: 100%;
+    width: 100%;
+    outline: 1px solid white;
+    outline-offset: -1rem;
+  }
+  .content {
+    padding-right: 4rem;
+  }
+  .content .font-cta {
+    font-size: 6rem;
+  }
+  .content h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+  nav {
+    background-color: transparent;
+  }
+  nav .navbar-brand {
+    color: white;
+    font-weight: 200 !important;
+  }
+  nav .navbar-brand .logo {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+  }
+  nav .nav-link {
+    font-size: 0.875rem;
+    color: white;
+    text-align: start;
+  }
+  nav .nav-active {
+    position: relative;
+    bottom: 0;
+    height: 1px;
+    width: 20px;
+    background-color: white;
+  }
+  nav .nav-link:hover {
+    color: white;
+  }
+  .btn-cta {
+    background-color: rgb(130, 9, 51);
+    padding: 0.8rem 2.2rem !important;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: white !important;
+  }
+  .btn-cta:hover {
+    background-color: white;
+    border: 1px solid rgb(130, 9, 51);
+    color: rgb(130, 9, 51) !important;
+  }
+}
+@media (min-width: 1200px) {
+  .content {
+    padding-right: 3rem;
+  }
+  .content .font-cta {
+    font-size: 7.5rem;
+  }
+  .content h1 {
+    font-size: 5.5rem;
+    line-height: 5.5rem;
+  }
+}
+@media (min-width: 1400px) {
+  #offer h2 {
+    font-size: 5rem;
+  }
+  #offer .image {
+    aspect-ratio: unset;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    max-width: 100%;
+    width: 100%;
+    outline: 1px solid white;
+    outline-offset: -1rem;
+  }
+  .hrscroll {
+    font-size: 0.9rem !important;
+    z-index: 3;
+    color: white;
+    position: absolute;
+    top: 20vh;
+    left: 0;
+    right: 3rem;
+    writing-mode: vertical-rl;
+  }
+  .content {
+    padding-right: 10rem;
+  }
+  .content .font-cta {
+    font-size: 9rem;
+  }
+  .content h1 {
+    font-size: 7rem;
+    line-height: 7rem;
+  }
+  .content hr.style-one {
+    height: 3px;
+    background-color: white;
+  }
+  .content p {
+    margin-bottom: 0;
+    font-weight: 200;
+    color: white;
+  }
+  .content p:nth-of-type(1) {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  .content p:nth-of-type(2) {
+    font-size: 1rem;
+  }
+  .content .btn-cta {
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 0.8rem;
+  }
+}
+@keyframes hrscrollanimation {
+  0% {
+    background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(0, 0, 0));
+  }
+  100% {
+    background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(255, 255, 255));
+  }
+}/*# sourceMappingURL=stylesheet.css.map */

@@ -1,0 +1,396 @@
+$color-primary: rgb(47, 77, 69);
+$color-secondary: rgb(115, 171, 132);
+$color-cta: rgb(130, 9, 51);
+$font-cta: Tangerine, cursive;
+$font-header: Montserrat, monospace;
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-family: Poppins, sans-serif;
+    font-weight: 400 !important;
+    font-size: 16px;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    // DEBUG
+    // background: #000 !important;
+    // color: #0f0 !important;
+    // outline: solid #f00 1px !important;
+}
+
+h1{
+    color: white;
+    font-weight: 300;
+    font-family: $font-header;
+}
+hr.style-one{
+    margin: .5rem 0 ;
+    opacity: 1;
+
+}
+hr.style-two{
+    border: 1px solid $color-primary;
+    opacity: 1;
+}
+#home{
+    // height: 100vh;
+    max-width:  100%;
+    width: 100%;
+
+}
+#offer{
+    background-image: url('../assets/images/offerbg.jpg');
+    h2{
+        font-size: 3rem;
+        font-weight: 400;
+    }
+    .image{
+        height: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        max-width: 100%;
+        width: 100%;
+        outline: 1px solid white;
+        outline-offset: -1rem;
+    }
+}
+#vid-bg{
+    position: absolute;
+    top: 0;
+    object-fit: cover;
+    height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100vh;
+}
+#vid-wrapper{
+    z-index: 2;
+    position: absolute;
+    background-image: linear-gradient(to right, rgba(0,0,0, .6), rgba(0,0,0, 1));
+    top: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+}
+nav{
+    background-color: white;
+    .navbar-brand{
+        .logo{
+            height: 3rem;
+            width: 3rem;
+            border-radius: 50%;
+        }
+    }
+    .nav-link{
+        text-align: center;
+    }
+}
+.btn-cta{
+    background-color: $color-cta;
+    padding: .5rem 2rem;
+    border-radius: 4px;
+    color: white;
+    border: 1px solid $color-cta;
+    transition: .2s all linear;
+}
+.btn-cta:hover{
+    background-color: white;
+    border: 1px solid $color-cta;
+    color: $color-cta;
+    font-weight: 500;
+}
+.content{
+    padding-right: 3rem;
+    position: absolute;
+    z-index: 4;
+    margin-top: 20vh;
+    h1{
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+    hr.style-one{
+        height: 3px;
+        background-color: white;
+        // background: linear-gradient(to bottom, rgba(255,255,255, 0), rgba(255,255,255, 1), rgba(255,255,255, 0));
+    }
+    p{
+        margin-bottom: 0;
+        font-weight: 200;
+        color: white;
+    }
+    p:nth-of-type(1){
+        font-size: 1rem;
+    }
+    p:nth-of-type(2){
+        font-size: .8rem;
+    }
+    .btn-cta{
+        font-size: .8rem;
+        width: fit-content  ;
+    }
+    .font-cta{
+        font-size: 4rem;
+    }
+    
+}
+.font-cta{
+    font-family: $font-cta;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: $color-secondary;
+}
+.font-secondary{
+    font-family: Montserrat, monospace;
+}
+.color-primary{
+    color: $color-primary;
+}
+.color-secondary{
+    color: $color-secondary;
+}
+.hrscroll{
+    // margin-top: 20vh;
+    z-index: 3;
+    color: white;
+    position: absolute;
+    font-size: .8rem;
+    top: 20vh;
+    right: 1rem;
+    writing-mode: vertical-rl;
+}
+.hrscroll::after{
+    content: "";
+    display: flex;
+    // background-color: white;
+    background-image: linear-gradient(to bottom, rgb(255,255,255), rgb(0,0,0));
+    width: 1px;
+    height: 80vh;
+    background-image: 400% 400%;
+    // animation-name: hrscrollanimation;
+    // animation-duration: 4s;
+}
+.navbar{
+    transition: .2s background-color linear;
+}
+.textblack{
+    color: black !important;
+    font-weight: 400 !important;
+}
+.textblack:has(.active){
+    color: black !important;
+    font-weight: 400 !important;
+    text-decoration: underline;
+}
+@media (min-width: 576px) {
+    .content{
+        padding-right: 3rem;
+        margin-top: 20vh;
+        padding-left: 5vw;
+        .font-cta{
+            font-size: 4.5rem;
+        }
+        h1{
+            font-size: 2.5rem;
+            line-height: 2.5rem;
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    #offer{
+        .offer-container{
+            position: relative;
+            text-align: center;
+            h2{
+                left: 0;
+                right: 0;
+                top: 10vh;
+                position: absolute;
+                color: white;
+                text-shadow: 3px 3  px #4E555B;
+            }
+            .image{
+                aspect-ratio: unset;
+                height: 100%;
+                object-fit: cover;
+                max-width: 100%;
+                width: 100%;
+                outline: 1px solid white;
+                outline-offset: -1rem;
+            }
+        }
+        .line{
+            background-color: $color-primary;
+            height: 6px;
+            border: 1px solid $color-primary;
+            width: 80%;
+            div:nth-of-type(1){
+                background-color: white;
+                width: 33.33%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    body{
+        font-family: Poppins, sans-serif;
+        font-weight: 200 !important;
+    }
+    #offer{
+        h2{
+            font-size: 5rem;
+        }
+        .image{
+            aspect-ratio: unset;
+            height: 100%;
+            object-fit: cover;
+            max-width: 100%;
+            width: 100%;
+            outline: 1px solid white;
+            outline-offset: -1rem;
+        }
+    }
+    .content{
+        padding-right: 4rem;
+        .font-cta{
+            font-size: 6rem;
+        }
+        h1{
+            font-size: 4rem;
+            line-height: 4rem;
+        }
+    }
+    
+    nav{
+        background-color: transparent;
+        .navbar-brand{
+            color: white;
+            font-weight: 200 !important;
+            .logo{
+                height: 3rem;
+                width: 3rem;
+                border-radius: 50%;
+            }
+        }
+        .nav-link{
+            font-size: .875rem;
+            color: white;
+            text-align: start;
+        }
+        .nav-active{
+          position: relative;
+          bottom: 0;
+          height: 1px;
+          width: 20px;
+          background-color: white;
+        }
+        .nav-link:hover{
+            color: white;
+        }
+    }
+    
+    .btn-cta{
+        background-color: $color-cta;
+        padding: .8rem 2.2rem !important;
+        border-radius: 4px;
+        font-size: 1rem;
+        color: white !important;
+    }
+    .btn-cta:hover{
+        background-color: white;
+        border: 1px solid $color-cta;
+        color: $color-cta !important;
+    }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    .content{
+        padding-right: 3rem;
+        .font-cta{
+            font-size: 7.5rem;
+        }
+        h1{
+            font-size: 5.5rem;
+            line-height: 5.5rem;
+        }
+    }
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+    #offer{
+        h2{
+            font-size: 5rem;
+        }
+        .image{
+            aspect-ratio: unset;
+            height: 100%;
+            object-fit: cover;
+            max-width: 100%;
+            width: 100%;
+            outline: 1px solid white;
+            outline-offset: -1rem;
+        }
+    }
+    .hrscroll{
+        font-size: .9rem !important;
+        z-index: 3;
+        color: white;
+        position: absolute;
+        top: 20vh;
+        left: 0;
+        right: 3rem;
+        writing-mode: vertical-rl;
+    }
+    .content{
+        padding-right: 10rem;
+        .font-cta{
+            font-size: 9rem;
+        }
+        h1{
+            font-size: 7rem;
+            line-height: 7rem;
+        }
+        hr.style-one{
+            height: 3px;
+            background-color: white;
+            // background: linear-gradient(to bottom, rgba(255,255,255, 0), rgba(255,255,255, 1), rgba(255,255,255, 0));
+        }
+        p{
+            margin-bottom: 0;
+            font-weight: 200;
+            color: white;
+        }
+        p:nth-of-type(1){
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+        p:nth-of-type(2){
+            font-size: 1rem;
+        }
+        .btn-cta{
+            width: fit-content;
+            font-size: .8rem;
+        }
+    }
+}
+
+@keyframes hrscrollanimation{
+    0%{
+        background: linear-gradient(to bottom, rgb(255,255,255), rgb(0,0,0));
+    }
+    100%{
+        background: linear-gradient(to bottom, rgb(0,0,0), rgb(255,255,255));
+    }
+}
