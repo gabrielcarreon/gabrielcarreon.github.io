@@ -45,18 +45,43 @@ hr.style-two{
 }
 #offer{
     background-image: url('../assets/images/offerbg.jpg');
-    h2{
-        font-size: 3rem;
-        font-weight: 400;
+    div{
+        height: auto;
     }
-    .image{
-        height: 100%;
-        aspect-ratio: 1/1;
-        object-fit: cover;
-        max-width: 100%;
-        width: 100%;
-        outline: 1px solid white;
-        outline-offset: -1rem;
+    .offer-container{
+        position: relative;
+        text-align: center;
+        h2{
+            z-index: 2;
+            left: 0;
+            right: 0;
+            top: 5vh;
+            position: absolute;
+            color: white;
+            text-shadow: 3px 3  px #4E555B;
+        }
+        .mobile-desc{
+            text-align: justify;
+            margin: 0 2rem;
+            line-height: .8rem;
+            z-index: 2;
+            left: 0;
+            right: 0;
+            bottom: 5vh;
+            font-size: .7rem;
+            font-weight: 300;
+            position: absolute;
+            color: white;
+        }
+        .image{
+            filter: brightness(.7);
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            max-width: 100%;
+            width: 100%;
+            outline: 1px solid white;
+            outline-offset: -1rem;
+        }
     }
 }
 #vid-bg{

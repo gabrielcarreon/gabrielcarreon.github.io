@@ -38,12 +38,37 @@ hr.style-two {
 #offer {
   background-image: url("../assets/images/offerbg.jpg");
 }
-#offer h2 {
-  font-size: 3rem;
-  font-weight: 400;
+#offer div {
+  height: auto;
 }
-#offer .image {
-  height: 100%;
+#offer .offer-container {
+  position: relative;
+  text-align: center;
+}
+#offer .offer-container h2 {
+  z-index: 2;
+  left: 0;
+  right: 0;
+  top: 5vh;
+  position: absolute;
+  color: white;
+  text-shadow: 3px 3 px #4E555B;
+}
+#offer .offer-container .mobile-desc {
+  text-align: justify;
+  margin: 0 2rem;
+  line-height: 0.8rem;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  bottom: 5vh;
+  font-size: 0.7rem;
+  font-weight: 300;
+  position: absolute;
+  color: white;
+}
+#offer .offer-container .image {
+  filter: brightness(0.7);
   aspect-ratio: 1/1;
   -o-object-fit: cover;
      object-fit: cover;
